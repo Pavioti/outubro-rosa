@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página informativa sobre o Outubro Rosa, autoexame, sintomas e prevenção do câncer de mama.">
+    <title>Outubro Rosa | Autoexame e Prevenção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header id="inicio" class="hero">
+        <img src="https://apesp.org.br/wp-content/uploads/2025/10/Design-sem-nome.png"
+            alt="Ilustração do Outubro Rosa" class="hero-banner">
+        <h1>Outubro Rosa</h1>
+        <p>Prevenção, atenção e cuidado com a saúde da mulher.</p>
+    </header>
+
+    <nav aria-label="Menu de navegação">
+        <button type="button" data-aba="sobre" aria-controls="sobre" aria-pressed="true">Início</button>
+        <button type="button" data-aba="autoexame" aria-controls="autoexame" aria-pressed="false">Autoexame</button>
+        <button type="button" data-aba="sintomas" aria-controls="sintomas" aria-pressed="false">Sintomas</button>
+        <button type="button" data-aba="prevenção" aria-controls="prevenção" aria-pressed="false">Prevenção</button>
+        <button type="button" data-aba="contato" aria-controls="contato" aria-pressed="false">Informações</button>
+    </nav>
+
+    <main>
+
+        <section id="sobre">
+            <h2>O que é o Outubro Rosa?</h2>
+
+            <p>
+                O Outubro Rosa é uma campanha de conscientização sobre a prevenção e o diagnóstico
+                precoce do câncer de mama. Ele reforça a importância de conhecer o próprio corpo,
+                realizar exames orientados e buscar ajuda profissional quando necessário.
+            </p>
+
+            <p>
+                O objetivo da campanha é incentivar cuidados recorrentes e reduzir atrasos no diagnóstico,
+                mostrando que a atenção à saúde pode fazer diferença na qualidade de vida.
+            </p>
+
+            <p>
+                <strong>O autocuidado é um passo importante.</strong>
+                Observar mudanças no corpo e manter acompanhamento regular com o profissional de saúde ajuda na prevenção.
+            </p>
+        </section>
+
+        <section id="autoexame" hidden>
+            <h2>Como fazer o autoexame</h2>
+
+            <p>
+                O autoexame pode ajudar a conhecer o corpo e perceber alterações. Ele deve ser feito com atenção,
+                em um momento tranquilo e de preferência sempre no mesmo período do mês.
+            </p>
+
+            <ol class="lista-ordenada">
+                <li>Observe o tamanho, a forma e a aparência dos seios em frente ao espelho com os braços relaxados e depois elevados.</li>
+                <li>Veja se há vermelhidão, retrações, inchaço, alterações na pele ou descamação.</li>
+                <li>Palpe os seios em posição deitada e em pé, usando as pontas dos dedos em movimentos circulares.</li>
+                <li>Verifique também a região axilar, pois pode haver nódulos nessa área.</li>
+                <li>Se notar qualquer alteração, procure uma avaliação médica.</li>
+            </ol>
+        </section>
+
+        <section id="sintomas" hidden>
+            <h2>Sinais que merecem atenção</h2>
+
+            <p>
+                Algumas alterações podem acontecer e precisam ser avaliadas por um profissional de saúde. Fique atenta a:
+            </p>
+
+            <ul class="lista-pontos">
+                <li>Nódulos ou endurecimentos na mama ou na axila.</li>
+                <li>Alterações na pele, como abaulamento, vermelhidão ou descamação.</li>
+                <li>Secreção pelo mamilo, especialmente se for espontânea ou unilateral.</li>
+                <li>Inchaço, dor persistente ou mudança no formato da mama.</li>
+                <li>Recuo ou retração do mamilo.</li>
+            </ul>
+
+            <p>
+                <strong>Se houver qualquer mudança persistente, não espere.</strong>
+                A consulta com o profissional de saúde é o passo correto para orientar o diagnóstico e o tratamento.
+            </p>
+        </section>
+
+        <section id="prevenção" hidden>
+            <h2>Prevenção e hábitos</h2>
+
+            <p>
+                A prevenção envolve mais do que exames. Há hábitos que ajudam a manter a saúde em dia e a reduzir riscos.
+            </p>
+
+            <ul class="lista-pontos">
+                <li>Realize consultas e exames de rotina conforme orientação médica.</li>
+                <li>Procure atenção com qualquer alteração persistente no peito ou na axila.</li>
+                <li>Mantenha uma alimentação equilibrada e uma rotina ativa.</li>
+                <li>Evite o uso do tabaco e cuide do sono e do bem-estar emocional.</li>
+                <li>Fique atenta ao próprio corpo e busque orientação profissional quando necessário.</li>
+            </ul>
+        </section>
+
+        <section id="contato" hidden>
+            <h2>Onde buscar ajuda?</h2>
+
+            <p>
+                Para mais informações sobre prevenção, diagnóstico e tratamento, procure uma unidade de saúde,
+                um ginecologista ou outro profissional qualificado.
+            </p>
+
+            <p>
+                O acompanhamento médico é essencial para avaliar qualquer suspeita e orientar o cuidado mais adequado.
+            </p>
+
+            <img class="info-image"
+                src="https://sindsistema.org.br/wp-content/uploads/2024/10/Design-sem-nome-4.png"
+                alt="Laço rosa e flores simbolizando o Outubro Rosa">
+
+            <a href="https://www.gov.br/inca/" target="_blank" rel="noopener noreferrer">Saiba mais no INCA</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <strong>Outubro Rosa</strong>
+            — Informação, cuidado e prevenção fazem parte do autocuidado.
+        </p>
+
+        <p>
+            Cuide da sua saúde e incentive outras pessoas a fazerem o mesmo.
+        </p>
+    </footer>
+
+    <script>
+        const botoes = document.querySelectorAll("[data-aba]");
+
+        botoes.forEach((botao) => {
+            botao.addEventListener("click", () => {
+                botoes.forEach((item) => {
+                    item.setAttribute("aria-pressed", "false");
+                    const secao = document.getElementById(item.getAttribute("data-aba"));
+                    if (secao) secao.hidden = true;
+                });
+
+                botao.setAttribute("aria-pressed", "true");
+                const secaoAtiva = document.getElementById(botao.getAttribute("data-aba"));
+                if (secaoAtiva) secaoAtiva.hidden = false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
+
